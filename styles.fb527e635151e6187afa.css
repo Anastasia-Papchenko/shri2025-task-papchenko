@@ -51,7 +51,7 @@ table {
     font-family: 'Lato';
     font-style: normal;
     font-weight: 400;
-    src: url(./assets/be36596da218e1eec01c.woff2) format('woff2');
+    src: url(assets/be36596da218e1eec01c.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
@@ -109,7 +109,7 @@ html, body {
     width: 6.75rem;
     height: 2.3125rem;
     margin-right: 3.25rem;
-    background: no-repeat 50% 50% url(./assets/fbf3825fdaeb5d79fbbe.svg);
+    background: no-repeat 50% 50% url(assets/fbf3825fdaeb5d79fbbe.svg);
     background-size: contain;
 }
 
@@ -119,7 +119,7 @@ html, body {
     height: 100%;
     margin: 0 0 0 auto;
     padding: 0;
-    background: 50% 50% no-repeat transparent url(./assets/93983e09c410833de99e.svg);
+    background: 50% 50% no-repeat transparent url(assets/93983e09c410833de99e.svg);
     border: none;
     border-radius: 0;
     appearance: none;
@@ -278,7 +278,7 @@ html, body {
     font-size: 0.8125rem;
     font-family: inherit;
     font-weight: bold;
-    background: no-repeat calc(100% - 1rem) 50% #FFD93E url(./assets/60fc682f8c0f5090796f.svg);
+    background: no-repeat calc(100% - 1rem) 50% #FFD93E url(assets/60fc682f8c0f5090796f.svg);
     appearance: none;
 }
 
@@ -330,7 +330,7 @@ html, body {
     display: flex;
     gap: 0.9375rem;
     height: 20.6875rem;
-    background: no-repeat 50% 50% url(./assets/b23d48f2e17f0ebd4d42.png);
+    background: no-repeat 50% 50% url(assets/b23d48f2e17f0ebd4d42.png);
     /*background-size: cover;*/
     background-size: 1260px;
     border-radius: 1.25rem;
@@ -446,7 +446,7 @@ html, body {
 }
 
 .hero-dashboard__icon_rain {
-    background-image: url(./assets/42b0eb622364cf87d607.svg);
+    background-image: url(assets/42b0eb622364cf87d607.svg);
 }
 
 .hero-dashboard__schedule {
@@ -514,23 +514,23 @@ html, body {
 }
 
 .event__icon_temp {
-    background-image: url(./assets/7dfddd93951249d35902.svg);
+    background-image: url(assets/7dfddd93951249d35902.svg);
 }
 
 .event__icon_temp2 {
-    background-image: url(./assets/09fa125b3586a342f8db.svg);
+    background-image: url(assets/09fa125b3586a342f8db.svg);
 }
 
 .event__icon_light {
-    background-image: url(./assets/4cc3e966fdf03fcc2fe4.svg);
+    background-image: url(assets/4cc3e966fdf03fcc2fe4.svg);
 }
 
 .event__icon_light2 {
-    background-image: url(./assets/5dfee338cdd081d52122.svg);
+    background-image: url(assets/5dfee338cdd081d52122.svg);
 }
 
 .event__icon_schedule {
-    background-image: url(./assets/7da758857d472bd9356f.svg);
+    background-image: url(assets/7da758857d472bd9356f.svg);
 }
 
 .event__title {
@@ -599,7 +599,7 @@ html, body {
     right: 0;
     width: 18px;
     bottom: 10px;
-    background: no-repeat 50% 50% url(./assets/a5506fa04db381094512.png);
+    background: no-repeat 50% 50% url(assets/a5506fa04db381094512.png);
     transform: rotate(180deg);
     cursor: pointer;
 }
