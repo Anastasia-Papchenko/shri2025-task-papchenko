@@ -6,11 +6,10 @@ import React, {
   lazy,
   Suspense
 } from 'react';
-import { TABS } from './constants';
+import { TABS, TABS_KEYS } from './constants';
 
 const Event = lazy(() => import('./Event'));
 
-const TABS_KEYS = Object.keys(TABS);
 
 export default function Main() {
     const ref = React.useRef();
