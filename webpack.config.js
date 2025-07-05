@@ -4,19 +4,22 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  entry: path.resolve(__dirname, 'src/index.jsx'),
+  entry: {
+    main: path.resolve(__dirname, 'src/index.jsx')
+  },
 
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: './', // важно для GitHub Pages
+    filename: '[name].[contenthash].js',         
+    publicPath: './',                           
+    assetModuleFilename: 'assets/[name].[hash][ext]'
   },
 
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx'],                   
     alias: {
-      assets: path.resolve(__dirname, 'src/assets'),
-    },
+      assets: path.resolve(__dirname, 'src/assets')  
+    }
   },
 
   module: {
@@ -24,45 +27,52 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: 'babel-loader',
+        use: 'babel-loader'                       
       },
       {
         test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        use: [
+          MiniCssExtractPlugin.loader,              
+          {
+            loader: 'css-loader',
+            options: { url: true }
+          }
+        ]
       },
       {
-        test: /\.(png|jpe?g|gif|svg|woff2?)$/i,
-        type: 'asset/resource',
-        generator: {
-          filename: 'assets/[name][ext]', 
-        },
-      },
-    ],
+        test: /\.(png|jpe?g|gif|svg|woff2?|eot|ttf|otf)$/i,
+        type: 'asset/resource'                     
+      }
+    ]
   },
 
   plugins: [
-    new CleanWebpackPlugin(),
-
+    new CleanWebpackPlugin(),                       
     new HtmlWebpackPlugin({
       template: 'public/index.html',
-      favicon: false,
+      inject: 'body'
     }),
-
     new MiniCssExtractPlugin({
-      filename: 'styles.css',
-    }),
+      filename: '[name].[contenthash].css'         
+    })
   ],
 
   optimization: {
-    splitChunks: false,      
-    runtimeChunk: false,     
+    splitChunks: {
+      chunks: 'all'                                
+    },
+    runtimeChunk: 'single'                        
   },
 
   devServer: {
-    static: path.join(__dirname, 'dist'),
+    static: {
+      directory: path.resolve(__dirname, 'dist')
+    },
     port: 3000,
     open: true,
+    hot: true
   },
 
-  mode: 'production', 
+  mode: 'production',
+  devtool: 'source-map'                            
 };
