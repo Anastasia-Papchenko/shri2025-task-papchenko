@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/Anastasia-Papchenko/shri2025-task-papchenko/issues"
   },
-  "homepage": "https://anastasia-papchenko.github.io/",
+  "homepage": "https://anastasia-papchenko.github.io/shri2025-task-papchenko/",
   "dependencies": {
     "bootstrap": "^5.3.7",
     "react": "^19.1.0",
